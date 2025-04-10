@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Bg</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-white">
+        <div class="bg-white p-10 rounded-lg text-center">
+            <h1 class="text-xl font-bold text-gray-700">🎨 Remove Background</h1>
+            <form method="POST" enctype="multipart/form-data" class="flex flex-col gap-4 mt-4">
+                <input type="file" name="image" required class="border rounded p-2" />
+
+
+
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                        Remove Background
+                    </button>
+
+
+
+    
+                    <a href="{{ url_for('download', filename=output_image) }}" 
+                       class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded inline-block" 
+                       download>
+                        Download Image
+                    </a>
+
+            </form>
+            <hr>
+        </div>
+    </div>
+</body>
+</html>
